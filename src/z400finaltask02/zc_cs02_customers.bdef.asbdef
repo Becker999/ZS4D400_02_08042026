@@ -1,0 +1,24 @@
+projection implementation in class ZBP_C_CS02_CUSTOMERS unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZC_CS02_CUSTOMERS alias ZcCs02Customers
+extensible
+use etag
+{
+
+field ( readonly )
+City;
+
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+}
